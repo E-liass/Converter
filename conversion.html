@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head><title>Conversion</title>
+ <meta charset="utf-8"/>
+ <meta name="viewport" content="width=device-width, initial-scal=1">
+ <meta name="HandheldFriendly" content="true">
+ <meta name="MobileOptimized" content="320">
+ <meta name="screen-orientation" content="portrait">
+ <meta name="x5-orientation" content="portrait">
+ <style type="text/css">
+  *{font-family:Arial,Helvetica,sans-serif;
+    }
+  .calc_resultat
+    {
+    width:90%;
+    text-align:center;}
+  .button
+  {
+  width:100%;
+  height:100%;
+  font-size:25px;}
+  .calc_td_btn {
+    border:2px solid #c1bfc1;
+    border-radius:60px;
+    width:25%;
+    height:100%;}
+  td {text-align:center;}
+  input {border:1px;
+    background:transparent;
+    }
+  .edge {
+  width: 350px;
+  margin:auto;
+  border: 5px solid #c1bfc1;
+  border-radius: 20px;
+  opacity: 0.8;
+   }
+  ul {list-style-type:none;
+  }
+  .affiche { width:90%; 
+  text-align:right;
+  font-family:System,sans-serif;
+  font-size:200%;
+  border:3px solid #c1bfc1;
+  border-radius:5px;
+  height: 150%;}
+  
+ </style>
+</head>
+<body>
+<nav color="blue">
+</nav>
+<div bgcolor="red">
+<p style='text-align:center;margin-left:auto; margin-right:auto'>Conversion taux de change en <b><i>valeur approximative</i> (marge 5%)</b></p>
+ <form>
+ Euro :
+    <input type="number" name="Euro" placeholder="valeur en €"
+     onKeyUp="this.form.FMG.value=this.value*20400">€
+ <br/>
+ USD :
+    <input type="number" name="USD" placeholder="valeur en $"
+     onKeyUp="this.form.FMG.value=this.value*17700">$
+ <br/>
+ <center>↑↓</center>
+ MGF :
+    <input type="number" name="FMG" placeholder="valeur en Fmg"
+     onKeyUp="this.form.Euro.value=this.value/18900">Fmg
+  <br/> --Or--<br/>
+ MGA :
+    <input type="number" name="MGA" placeholder="valeur en Ar"
+     onKeyUp="this.form.FMG.value=this.value*5">Ar
+ </form>
+ <marquee DIRECTION="left" bgcolor="#c0844f" scrollamount="10">
+  <font color="white" size="4"><b><i>Hello! concéption d'une page offline pour mieux vous aider aux éstimations d'une valeur monnétaire... Cour de change du 10/01/2019  rapidité 🏃 un simple gèste 💁 :) </i></b>
+  </font>     
+ </marquee>
+ </div>
+ <div>
+  <p style='text-align:center;margin-left:auto; margin-right:auto'>Conversion binaire</p>
+  <form>
+    <input type="number" name="mbps" placeholder="Débits en Mbps"
+    onKeyUp="this.form.mops.value=this.value/8" maxlength="8">Mbps (Mbits/s)
+    <input type="number" name="mops" placeholder="Débits en MBps"
+    onKeyUp="this.form.mbps.value=this.value*8" maxlength="8">Mo/s (MBytes/s)<br/>
+  </form>
+ </div>
+ <div>
+  <p style='text-align:center;margin-left:auto; margin-right:auto'>Conversion aéronautique</p>
+   <div>
+   <form>
+    <input type="number" name="feet" placeholder="Altitude en pied"
+    onKeyUp="this.form.alt.value=this.value*0.3048" maxlength="6">ft
+    <input type="number" name="alt" placeholder="Altitude en mètre"
+    onKeyUp="this.form.feet.value=this.value/0.3048" maxlength="6">m
+   </form>
+   </div>
+   <div>
+   <form>
+     <input type="number" name="mille" placeholder="Distance en nautique mille"
+     onKeyUp="this.form.kmeter.value=this.value*1.852">NM
+     <input type="number" name="kmeter" placeholder="Distance en km"
+     onKeyUp="this.form.mille.value=this.value/1.852">Km
+   </form>
+   </div>
+   <div>
+   <form>
+     <input type="number" name="knot" placeholder="Vitesse en nœud"
+     onKeyUp="this.form.kmh.value=this.value*1.852" maxlength="5">kt
+     <input type="number" name="kmh" placeholder="Vitesse en km/h"
+     onKeyUp="this.form.knot.value=this.value/1.852">Km/h
+<p>Mach 
+     <input type="number" name="mach" placeholder="Dans de l'air à 0°c"
+     onKeyUp="this.form.kmh.value=this.value*1191.6" maxlength="4"></p> 
+     <input type="number" name="celc" placeholder="t° en celcius"
+     onKeyUp="this.form.fahr.value=this.value*9/5+32" maxlength="6">°C
+     <input type="number" name="fahr"placeholder="t° en fahrenheit"
+     onKeyUp="this.form.celc.value=(this.value-32)*5/9" maxlength="7">°F 
+<p>Pression :</p>
+     <input type="number" name="inHg" placeholder="Pression en pouce de mercure"
+     onKeyUp="this.form.bar.value=this.value*(33.86*0.001)">inHg
+     <input type="number" name="hpa" placeholder="1hPa=0.001bar"
+     onKeyUp="this.form.inHg.value=this.value/33.86">hPa = mbar
+     <input type="number" name="bar" placeholder="1Atm=1.01325bar"
+     onKeyUp="this.form.hpa.value=this.value*1000">bar
+    </form>
+    </div>
+ </div>
+ <hr/>
+ <p style='text-align:center;margin-left:auto; margin-right:auto'><button Onclick="javascript:window.history.go(0)">Actualiser</button></p>
+ <div>
+ <center>
+  <form name="calculatrice" action="" onSubmit="resultat();return false;">    
+    <table class="edge" cellspacing="8">
+    <thead>
+    <tr><td colspan="4" border="0"></td><td><b> CASIO </td></tr>
+    <tr><th colspan="5">
+        <input type="text" readonly="readonly" name="affiche" align="right" class="affiche" placeholder=" Miandry ny kajinao "/>
+        </th>
+    </tr>
+    <tr><th colspan="5" class="calc_th_resultat">
+        <input type="text" readonly="readonly" name="calc_resultat" id="calc_resultat" class="calc_resultat" onkeydown="javascript:key_detect_calc('calc',event);"/>        
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="calc_td_btn"><input type="reset" class="button" value="AC"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="x²" onClick="fonction_speciale('pow')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="(" onClick="ajouter('(')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value=")" onClick="ajouter(')')"></td>
+        <td class="calc_td_btn"><input type="button" class="button "value="&larr;" onclick="supp('')" ></td>
+    </tr>
+    <tr>
+        <td class="calc_td_btn"><input type="button" class="button" value="7" onClick="ajouter('7')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="8" onClick="ajouter('8')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="9" onClick="ajouter('9')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="&divide" onClick="ajouter('/')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="mod" onClick="ajouter('%')"></td>
+    </tr>
+    <tr>
+        <td class="calc_td_btn"><input type="button" class="button" value="4" onClick="ajouter('4')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="5" onClick="ajouter('5')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="6" onClick="ajouter('6')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="×" onClick="ajouter('*')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="&plusmn;" onClick="ajouter('-')"></td>
+    </tr>
+    <tr>
+        <td class="calc_td_btn"><input type="button" class="button" value="1" onClick="ajouter('1')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="2" onClick="ajouter('2')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="3" onClick="ajouter('3')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="-" onClick="ajouter('-')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="%" onClick="ajouter('/100')"></td>
+    </tr>
+    <tr>
+        <td class="calc_td_btn"><input type="button" class="button" value="," onClick="ajouter('.')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="0" onClick="ajouter('0')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="00" onClick="ajouter('00')"></td>
+        <td class="calc_td_btn"><input type="button" class="button" value="+" onClick="ajouter('+')"></td>
+        <td class="calc_td_btn" background="gray"><input type="button" class="button" value="=" onClick="resultat()"></td>
+    </tr>
+    </tbody>
+    <tfoot>
+   <tr><td colspan="5" border="1px solid #FFFFFF"><center><p>© 2018 - 2019 by E-liass</p></center></td></tr>
+    </tfoot>
+    </table>
+  </form>
+ </center>
+ </div>
+ <script type="text/javascript">
+ <!--
+ function verification(entree) 
+  {
+   var seulement_ceci ="0123456789[]()-+*%/.";
+   for (var i = 0; i < entree.length; i++)
+   if (seulement_ceci.indexOf(entree.charAt(i))<0 ) return false;
+   return true;
+  }
+ 
+ function resultat() 
+ {
+  var x = 0;
+  if (verification(window.document.calculatrice.affiche.value))
+  x = eval(window.document.calculatrice.affiche.value);
+  window.document.calculatrice.affiche.value = x;
+ }
+ 
+ function ajouter(caracteres) 
+ {
+ window.document.calculatrice.affiche.value =
+ window.document.calculatrice.affiche.value + caracteres;
+ }
+ function supp(caracteres)
+ { if (window.document.calculatrice.affiche.value<10 
+      && window.document.calculatrice.affiche.value>-10)
+    { window.document.calculatrice.affiche.value=0;
+    }
+    else
+    {
+  window.document.calculatrice.affiche.value=
+  window.document.calculatrice.affiche.value.slice(0,window.document.calculatrice.affiche.value.length-1);
+    }
+  }
+ 
+ function fonction_speciale(fonction) {
+ if (verification(window.document.calculatrice.affiche.value)) 
+ {
+  if(fonction == "sqrt") 
+   {
+    var x = 0;
+    x = eval(window.document.calculatrice.affiche.value);
+     window.document.calculatrice.affiche.value = Math.sqrt(x);
+   }
+  if(fonction == "pow") 
+   {
+    var x = 0;
+    x = eval(window.document.calculatrice.affiche.value);
+    window.document.calculatrice.affiche.value = x * x;
+   }
+  if(fonction == "log") 
+   {
+    var x = 0;
+    x = eval(window.document.calculatrice.affiche.value);
+    window.document.calculatrice.affiche.value = Math.log(x);
+    }
+  } else window.document.calculatrice.affiche.value = 0
+ }
+ //-->
+ </script>
+ </body>
+ <footer>
+ <div align="bottom">
+ <p style="text-align:center;margin-left:auto; margin-right:auto" font-size="30%">-- All right reserved --</p>
+ </div>
+ </footer>
+ </html>
