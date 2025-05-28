@@ -2,7 +2,7 @@
 
 This program is developed during my 2nd academic year 2019, just practicing further after the PCG.html made on my 1st year
 
- . Functioanlity:
+ . Functionality:
 converting input number/currency in real-time (offline mode)
 JS Calculator 
 
