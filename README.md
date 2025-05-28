@@ -1,2 +1,22 @@
-This verion is an updated of the app, using the same tehcnology as the previous one.
-The upcoming version is still on hold, as this is the practice of my 2nd year
+Converter.html
+
+This program is developed during my 2nd academic year 2019, just practicing further after the PCG.html made on my 1st year
+
+ . Functioanlity:
+converting input number/currency in real-time (offline mode)
+JS Calculator 
+
+ . Aim:
+ JS practice
+ Interactive and responsive GUI
+ Calculator customized interface
+
+ As same as the previous project, it is coded on android app
+ #I didn't possess PC for VScode or any professional text editor at the time I was buiding it (Android 4.1 Jellybeans)
+ 
+This verion 1.0 is an updated of the program, using the same tehcnology as the previous one.
+The upcoming version is still on hold, as this is the practice of my Grade 2
+
+#Note that this program is just an idea coming out of my mind, not a professional one,
+a kind of Test project
+
